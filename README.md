@@ -24,9 +24,11 @@ Instead of crying, I built an automated pipeline to execute a surgical strike on
 - **Anti-Crash Armor:** Engineered a custom function to auto-adjust column widths and safely truncate giant text strings.
 
 ## 🧠 The "Objective Data" Approach (Context is King)
-Cleaning data doesn't mean blindly deleting everything that looks weird. Here is how I preserved the original integrity of the dataset:
-- **Why I left 90% of `Reviews` blank (Not Dropped):** Even though it was mostly empty, the existing 10% is highly objective, real-world user feedback. Without explicit instructions to delete it, dropping it would destroy the original data's integrity. I preserved it to let the client decide its business value.
-- **Why I kept `Estimated owners` as a range (e.g., "20,000 - 30,000"):** This is how the original source reports it. Without a specific context or client request to calculate a single average, altering it would mean guessing and fabricating data. I maintained its original, objective format so the client has the most honest baseline for their analysis.
+Cleaning data isn't about blindly deleting or keeping everything. It's about understanding the business utility of each column.
+
+- **Why I kept 90% empty `Reviews` (Not Dropped):** Even though it was mostly empty, the remaining 10% is authentic, real-world user feedback. Without explicit instructions, dropping it would destroy potential sentiment analysis value. I preserved it to let the client decide.
+- **Why I dropped `Score rank` & `Metacritic url` (96-99% empty):** While they are objective data, having 99% null values makes them useless for any automated analysis and just bloats the file size. If a client genuinely needs a specific game's score, they can look it up manually. Dropping these "ghost columns" optimized the file for actual business use.
+- **Why I kept `Estimated owners` as a range (e.g., "0 - 20,000 "):** This is the original source's format. Without a specific client request to calculate a single average, altering it would mean fabricating data. I maintained its original, objective format to give the most honest baseline.
 
 ## 📊 The Result & The "Real-World" Optimization (The Victory)
 - **Before:** 40 messy columns, 6 validation errors, and a literal text bomb. Total chaos.
