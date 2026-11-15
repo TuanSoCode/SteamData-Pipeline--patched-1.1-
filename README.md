@@ -35,9 +35,6 @@ Cleaning data isn't about blindly deleting or keeping everything. It's about und
 - **After:** 36 perfectly clean columns, 0 nulls, 0 duplicates, optimized data types (saving 25% memory).
 - **The Delivery Masterstroke (Proactive Formatting):** Instead of forcing a massive, unstable file that would crash the client's Excel, I engineered a proactive delivery strategy. I split the final clean dataset into 6 perfectly formatted, lightweight CSV parts using UTF-8 encoding. This guarantees the client can instantly open, analyze, and process the files without any system lag or encoding corruption.
 
-<img width="989" height="619" alt="1000012672" src="https://github.com/user-attachments/assets/3ee370e1-a3c3-432c-a81d-a00fd8840518" />
-
-*(Screenshot of the final, beautifully styled client-ready report)*
 
 ## 💡 The Business Value
 This project proves I don't just "know code." I understand data integrity, I respect the original context, and I can take a completely broken, real-world dataset and turn it into a professional, client-ready report in seconds. No drama. Just results.
